@@ -3,7 +3,7 @@ angular.module('receptacle.search', [])
   .controller('SearchController', function ($scope) {
 
     $scope.data = {};
-    $scope.search = function(){};
+    $scope.search = 'enter item here';
 
   });
 

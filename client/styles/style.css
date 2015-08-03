@@ -33,23 +33,6 @@ h1 {
   margin: 0 auto;
   text-align: center;
   color: rgba(0,0,0,.6);
-/*  text-shadow:
-    0 1px 0px #333,
-    1px 0 0px #5dabcd,
-    1px 2px 1px #333,
-    2px 1px 1px #5dabcd,
-    2px 3px 2px #333,
-    3px 2px 2px #5dabcd,
-    3px 4px 2px #333,
-    4px 3px 3px #5dabcd,
-    4px 5px 3px #333,
-    5px 4px 2px #5dabcd,
-    5px 6px 2px #333,
-    6px 5px 2px #5dabcd,
-    6px 7px 1px #333,
-    7px 6px 1px #5dabcd,
-    7px 8px 0px #333,
-    8px 7px 0px #5dabcd;*/
 }
 
 h3 {
@@ -106,9 +89,11 @@ h3 {
   text-align: center;
 }
 
-#container {
+#search {
   clear: both;
-  margin-top: 10px;
+  text-align: center;
+  padding-top: 30px;
+  margin: 0 auto;
 }
 
 .link {
@@ -180,15 +165,17 @@ form {
 
 input {
   width: 360px;
-  display: block;
   font-size: 13px;
-  padding: 5px;
-  margin-bottom: 5px;
+  border-radius: 10px;
+  background-color: white;
+  height: 30px;
+  /*font-family: rabioheadregular, sans-serif, serif;*/
+  text-align: center;
 }
 
-input[type=url] {
+/*input[type=url] {
   display: inline
-}
+}*/
 
 input[type=url]:focus {
   outline: none;
@@ -231,3 +218,23 @@ input[type=url]:focus {
 {
     border:1px solid #f00;
 }
+
+
+
+/*  text-shadow:
+    0 1px 0px #333,
+    1px 0 0px #5dabcd,
+    1px 2px 1px #333,
+    2px 1px 1px #5dabcd,
+    2px 3px 2px #333,
+    3px 2px 2px #5dabcd,
+    3px 4px 2px #333,
+    4px 3px 3px #5dabcd,
+    4px 5px 3px #333,
+    5px 4px 2px #5dabcd,
+    5px 6px 2px #333,
+    6px 5px 2px #5dabcd,
+    6px 7px 1px #333,
+    7px 6px 1px #5dabcd,
+    7px 8px 0px #333,
+    8px 7px 0px #5dabcd;*/

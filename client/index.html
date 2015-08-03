@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app="receptacle"> <!-- ng-app='receptacle' -->
+  <head>
+    <meta charset="utf-8" />
+    <title>receptacle</title>
+    <link rel="stylesheet" type="text/css" href="./styles/style.css" />
+  </head>
+  <body ng-controller="SearchController">
+    <h1>receptacle</h1>
+    <h3>Find the optimal Berkeley/Oakland location to dispose of things you no longer use</h3>
+    <div ui-view></div>
+    <script src="../node_modules/angular/angular.min.js"></script>
+    <script src="../node_modules/angular-ui-router/build/angular-ui-router.min.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/search/search.js"></script>
+<!--     <script src="app/services/services.js"></script> -->
+  </body>
+</html>

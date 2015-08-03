@@ -1,0 +1,29 @@
+{
+  "name": "receptacle",
+  "version": "1.0.0",
+  "description": "to find where it should go now",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChristopherSalam/receptacleMVP.git"
+  },
+  "keywords": [
+    "waste",
+    "reuse",
+    "Berkeley",
+    "Oakland",
+    "MVP",
+    "recycle",
+    "compost",
+    "trash"
+  ],
+  "author": "Christopher Salam",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ChristopherSalam/receptacleMVP/issues"
+  },
+  "homepage": "https://github.com/ChristopherSalam/receptacleMVP#readme"
+}

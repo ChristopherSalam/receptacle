@@ -1,27 +1,33 @@
-<div id='search' ng-controller='SearchController'>
-  <div><input placeholder="search" ng-model="search"></div>
+<div ng-init="data = [{type: 'cans', receptacle: 'blue bin'},
+                      {type: 'can', receptacle: 'blue bin'},
+                      {type: 'aluminum', receptacle: 'blue bin'},
+                      {type: 'glass', receptacle: 'blue bin'},
+                      {type: 'bottle', receptacle: 'blue bin'},
+                      {type: 'foil', receptacle: 'blue bin'},
+                      {type: 'paper', receptacle: 'blue bin'},
+                      {type: 'magazine', receptacle: 'blue bin'},
+                      {type: 'food', receptacle: 'green bin'},
+                      {type: 'newspaper', receptacle: 'blue bin'},
+                      {type: 'carrots', receptacle: 'green bin'},
+                      {type: 'styrafoam', receptacle: 'trash'}]">
 </div>
-<!--ng-repeat="link in data.links | filter:orderBy:visits | filter:search" //from search
-          <img src='/redirect_icon.png'/>
-          <div class='info'>
-          <div class='visits'><span class='count'>{{link.visits}}</span>Visits</div>
-          <div class='title'>{{link.title}}</div>
-          <div class='original'>{{link.url}}</div>
-          <a href='{{link.base_url}}/api/links/{{link.code}}'>{{link.base_url}}/api/links/{{link.code}}</a> -->
-
-<!--     <div id='container'>
-      <ul class='link' >
-        <li ng-class-odd="'odd'" ng-class-even="'even'">
-        </li>
-      </ul>
-    </div> -->
-
-
-
+<!-- <div id='search' ng-controller='SearchController'> -->
+<div id='search'>
+  <input class="ng-touched" placeholder="enter item here" ng-model="search.type">
+</div>
+<!-- </div> -->
+<table id='list' ng-hide="$(#search).hasClass('ng-untouched')" ng-show="link in data | filter:search:true">
+  <tr class='link'  ng-repeat="link in data | filter:search:true">
+    <!--<td>{{link.type}}</td>-->
+    <td>{{link.receptacle}}</td>
+  </tr>
+</table>
 <!--   <div class='navigation'>
 
     <ul>
       <li><a href='#/links' class='index'>All Links</a></li>
       <li><a href='#/shorten' class='create'>Shorten</a></li>
     </ul>
-      </div> -->
+      </div>
+
+       ng-class-odd="'odd'" ng-class-even="'even'"-->

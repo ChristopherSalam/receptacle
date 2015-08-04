@@ -2,8 +2,15 @@ angular.module('receptacle.search', [])
 
   .controller('SearchController', function ($scope) {
 
-    $scope.data = {};
-    $scope.search = 'enter item here';
+    $scope.search = '';
+    // $scope.data = [{type: 'cans', receptacle: 'blue bin'}, //address1: {addLine1: "berkeley recycling"}
+    //                {type: 'newspaper', receptacle: 'blue bin'},
+    //                {type: 'carrots', receptacle: 'green bin'},
+    //                {type: 'styrafoam', receptacle: 'trash'}];
+
+    // // $scope.getLinks = function(){
+    //   return $scope.data;
+    // }
 
   });
 

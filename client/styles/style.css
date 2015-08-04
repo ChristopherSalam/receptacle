@@ -4,14 +4,14 @@
 }
 
 @font-face {
-/*    font-family: rabioheadregular;
+    font-family: rabioheadregular;
     src: url(../styles/Rabiohead/rabiohead_regular_macroman/rabiohead_regular_macroman/rabiohead-webfont.eot);
     src: url(../styles/Rabiohead/rabiohead_regular_macroman/rabiohead-webfont.eot?#iefix) format('embedded-opentype'),
          url(../styles/Rabiohead/rabiohead_regular_macroman/rabiohead-webfont.woff) format('woff'),
          url(../styles/Rabiohead/rabiohead_regular_macroman/rabiohead-webfont.ttf) format('truetype'),
          url(../styles/Rabiohead/rabiohead_regular_macroman/rabiohead-webfont.svg#rabioheadregular) format('svg');
     font-weight: normal;
-    font-style: normal;*/
+    font-style: normal;
 }
 
 body {
@@ -219,7 +219,17 @@ input[type=url]:focus {
     border:1px solid #f00;
 }
 
+table {
+  font-family: rabioheadregular, sans-serif, serif;
+  margin: 30px auto;
+  font-size: 2em;
+}
+td {
+  padding: 10px;
+}
 
+input.ng-untouched {
+}
 
 /*  text-shadow:
     0 1px 0px #333,

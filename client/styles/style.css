@@ -1,6 +1,6 @@
 @font-face {
-/*    font-family: frente;
-    src: url(../styles/frente-h1/frenteh1regular.otf);*/
+    font-family: frente;
+    src: url(../styles/frente-h1/frenteh1regular.otf);
 }
 
 @font-face {
@@ -18,7 +18,7 @@ body {
   margin: 0;
   margin-top: 10px;
   font-family: arial, sans-serif;
-/*  background: url(crumpled-brown-paper-texture-60perc.jpg) no-repeat;*/
+  background: url(crumpled-brown-paper-texture-60perc.jpg) no-repeat;
 }
 
 a {
@@ -181,6 +181,9 @@ input[type=url]:focus {
   outline: none;
 }
 
+input:focus, textarea:focus {
+    outline: none;
+}
 
 .error {
   border: red solid 4px;

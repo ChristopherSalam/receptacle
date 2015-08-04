@@ -10,11 +10,9 @@ angular.module('receptacle.search', [])
 
     // // $scope.getLinks = function(){
     //   return $scope.data;
-    // }
+    // }g
 
   });
-
-
   // $scope.trustSrc = function(src) {  /*removed from scope $sce Search */
   //   return $sce.trustAsResourceUrl(src);
   // }

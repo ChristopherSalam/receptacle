@@ -16,8 +16,8 @@
   <input class="ng-touched" placeholder="enter item here" ng-model="search.type">
 </div>
 <!-- </div> -->
-<table id='list' ng-hide="$(#search).hasClass('ng-untouched')" ng-show="link in data | filter:search:true">
-  <tr class='link'  ng-repeat="link in data | filter:search:true">
+<table>
+  <tr class='link' ng-hide="$(#search).hasClass('ng-untouched')"  ng-repeat="link in data | filter:search:true">
     <!--<td>{{link.type}}</td>-->
     <td>{{link.receptacle}}</td>
   </tr>
@@ -30,4 +30,6 @@
     </ul>
       </div>
 
-       ng-class-odd="'odd'" ng-class-even="'even'"-->
+       ng-class-odd="'odd'" ng-class-even="'even'"
+<table id='list' ng-hide="$(#search).hasClass('ng-untouched')">
+       -->

@@ -16,7 +16,7 @@
   <input class="ng-touched" placeholder="enter item here" ng-model="search.type">
 </div>
 <!-- </div> -->
-<table>
+<table id='list'>
   <tr class='link' ng-hide="$(#search).hasClass('ng-untouched')"  ng-repeat="link in data | filter:search:true">
     <!--<td>{{link.type}}</td>-->
     <td>{{link.receptacle}}</td>

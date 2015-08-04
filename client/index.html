@@ -1,24 +1,39 @@
 <!DOCTYPE html>
-<html ng-app="receptacle"> <!-- ng-app='receptacle' -->
+<html lang="en" ng-app="receptacle"> <!-- ng-app='receptacle' -->
   <head>
     <meta charset="utf-8" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>receptacle</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/skeleton.css">
     <link rel="stylesheet" type="text/css" href="./styles/style.css" />
-    <link rel="stylesheet" type="text/css" href="../node_modules/fullpage.js/jquery.fullPage.css"/>
+    <link rel="icon" type="image/png" href="images/favicon.png">
   </head>
   <body ng-controller="SearchController">
-    <div class-"slide">
-      <h1>receptacle</h1>
-      <h3>Find the optimal Berkeley location to dispose of things you no longer use</h3>
-      <div ui-view></div>
-      <a href='http://api.earth911.com'><svg src=''/></a>
-<!--<script src="app/services/services.js"></script> -->
+    <div id="scrollArea">
+      <div ui-view>
+      </div>
     </div>
-    <div class-"slide">
-    </div>
-      <script src="../node_modules/angular/angular.min.js"></script>
-      <script src="../node_modules/angular-ui-router/build/angular-ui-router.min.js"></script>
-      <script src="app/app.js"></script>
-      <script src="app/search/search.js"></script>
+  <script src="../node_modules/angular/angular.min.js"></script>
+  <script src="../node_modules/angular-ui-router/build/angular-ui-router.min.js"></script>
+  <script src="app/app.js"></script>
+  <script src="app/search/search.js"></script>
+<!--   <script>
+    if($('#searchInput').hasClass("ng-untouched"))
+    {
+        $('#bottom').hide()
+    }
+    else {
+        $('#bottom').show()
+    }
+  </script> -->
   </body>
 </html>
+
+<!--<div class='navigation'>
+  <ul>
+    <li><a href='#/links' class='index'>All Links</a></li>
+    <li><a href='#/shorten' class='create'>Shorten</a></li>
+  </ul> -->

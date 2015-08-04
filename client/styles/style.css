@@ -228,18 +228,28 @@ td {
   background-color: #f2aba7;
 }
 
+.random{
+  background-color: #ef0f4b;
+}
+
 .recycle{
-  background-image: url(recycle.png);
+  background-image: url(../images/recycle.png);
   background-repeat: no-repeat;
 }
 
 .compost{
-  background-image: url(compost.png);
+  background-image: url(../images/compost.png);
   background-repeat: no-repeat;
 }
 
 .trash{
-  background-image: url(garbage.png);
+  background-image: url(../images/garbage.png);
+  background-repeat: no-repeat;
+}
+
+.nextsteps{
+  background-image: url(../images/cons.png);
+  overflow: visible;
   background-repeat: no-repeat;
 }
 
@@ -248,6 +258,11 @@ td {
   height: 300px;
   height: 90vw;
   background-repeat: none;
+  display:inline-block;
+}
+
+.pushOff {
+  margin: 20px auto;
 }
 
 .hideThis {
@@ -265,9 +280,13 @@ td {
   }
 
 #section0{
-    background-image: url(crumpled-brown-paper-texture-60perc.jpg);
+    background-image: url(../images/crumpled-brown-paper-texture-60perc.jpg);
     background-repeat: repeat-y;
   }
 
 #section1{
   }
+
+sub{
+  font-size: 150%;
+}

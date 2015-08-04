@@ -1,35 +1,37 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="receptacle"> <!-- ng-app='receptacle' -->
+
   <head>
+
+    <title>receptacle</title>
+
     <meta charset="utf-8" />
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>receptacle</title>
+
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/skeleton.css">
     <link rel="stylesheet" type="text/css" href="./styles/style.css" />
     <link rel="icon" type="image/png" href="images/favicon.png">
+
   </head>
+
   <body ng-controller="SearchController">
+
     <div id="scrollArea">
-      <div ui-view>
-      </div>
+
+      <div ui-view></div>
+
     </div>
+
   <script src="../node_modules/angular/angular.min.js"></script>
   <script src="../node_modules/angular-ui-router/build/angular-ui-router.min.js"></script>
   <script src="app/app.js"></script>
   <script src="app/search/search.js"></script>
-<!--   <script>
-    if($('#searchInput').hasClass("ng-untouched"))
-    {
-        $('#bottom').hide()
-    }
-    else {
-        $('#bottom').show()
-    }
-  </script> -->
+
   </body>
+
 </html>
 
 <!--<div class='navigation'>

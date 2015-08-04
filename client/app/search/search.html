@@ -1,35 +1,52 @@
-<div ng-init="data = [{type: 'cans', receptacle: 'blue bin'},
-                      {type: 'can', receptacle: 'blue bin'},
-                      {type: 'aluminum', receptacle: 'blue bin'},
-                      {type: 'glass', receptacle: 'blue bin'},
-                      {type: 'bottle', receptacle: 'blue bin'},
-                      {type: 'foil', receptacle: 'blue bin'},
-                      {type: 'paper', receptacle: 'blue bin'},
-                      {type: 'magazine', receptacle: 'blue bin'},
-                      {type: 'food', receptacle: 'green bin'},
-                      {type: 'newspaper', receptacle: 'blue bin'},
-                      {type: 'carrots', receptacle: 'green bin'},
-                      {type: 'styrafoam', receptacle: 'trash'}]">
-</div>
-<!-- <div id='search' ng-controller='SearchController'> -->
-<div id='search'>
-  <input class="ng-touched" placeholder="enter item here" ng-model="search.type">
-</div>
-<!-- </div> -->
-<table>
-  <tr class='link' ng-hide="$(#search).hasClass('ng-untouched')"  ng-repeat="link in data | filter:search:true">
-    <!--<td>{{link.type}}</td>-->
-    <td>{{link.receptacle}}</td>
-  </tr>
-</table>
-<!--   <div class='navigation'>
+<div class-"section" id="section0">
+  <div class="eighty">
+    <h1>receptacle</h1>
+  </div>
+  <div class="fifty">
+    <h3>Find the optimal location to dispose of things you no longer use</h3>
+  </div>
+  <!--input data. want to move into service-->
+  <div ng-init="data = [{type: 'cans', receptacle: 'blue bin'},
+                        {type: 'can', receptacle: 'blue bin'},
+                        {type: 'aluminum', receptacle: 'blue bin'},
+                        {type: 'glass', receptacle: 'blue bin'},
+                        {type: 'bottle', receptacle: 'blue bin'},
+                        {type: 'foil', receptacle: 'blue bin'},
+                        {type: 'paper', receptacle: 'blue bin'},
+                        {type: 'magazine', receptacle: 'blue bin'},
+                        {type: 'food', receptacle: 'green bin'},
+                        {type: 'newspaper', receptacle: 'blue bin'}, 
+                        {type: 'fruits', receptacle: 'green bin'},
+                        {type: 'vegetables', receptacle: 'green bin'}, 
+                        {type: 'banana', receptacle: 'green bin'},
+                        {type: 'carrots', receptacle: 'green bin'},
+                        {type: 'bananas', receptacle: 'green bin'},
+                        {type: 'carrot', receptacle: 'green bin'},
+                        {type: 'styrafoam', receptacle: 'trash can'}]">
+  </div>
+  <!-- <div id='search' ng-controller='SearchController'> -->
+    <div id='search'>
+      <input class="ng-touched" placeholder="enter item here" ng-model="search.type">
+    </div>
+  <!-- </div> -->
+  <div class="eighty">
+    <nav class="nav-images">
+    <a href='http://api.earth911.com'><img class="1" src="../client/styles/Receptacle-Assets.svg" width="300px" height="300px"/></a>
+    <a href='http://api.earth911.com'><img src="../client/styles/Receptacle-Assets.svg" width="300px" height="300px"/></a>
+    <a href='http://api.earth911.com'><img src="../client/styles/Receptacle-Assets.svg" width="300px" height="300px"/></a>
+    </nav>
+  </div>
 
-    <ul>
-      <li><a href='#/links' class='index'>All Links</a></li>
-      <li><a href='#/shorten' class='create'>Shorten</a></li>
-    </ul>
-      </div>
-
-       ng-class-odd="'odd'" ng-class-even="'even'"
-<table id='list' ng-hide="$(#search).hasClass('ng-untouched')">
-       -->
+  <!--<script src="app/services/services.js"></script> -->
+</div>
+<div ng-repeat="link in data | filter:search:true">
+  <div class="section" ng-class="{'blue' : {{link.receptacle === 'blue bin'}}, 'green' : {{link.receptacle === 'green bin'}}, 'pink' : {{link.receptacle === 'trash can'}} }" id="section1" >
+      <table>
+        <tr class='link'> <!-- ng-hide="$(#search).hasClass('ng-untouched')" -->
+          <!--<td>{{link.type}}</td>-->
+          <!-- Place this item in a {{link.receptacle}} -->
+        </tr>
+        <div class="bigone" ng-class="{'recycle' : {{link.receptacle === 'blue bin'}}, 'compost' : {{link.receptacle === 'green bin'}}, 'trash' : {{link.receptacle === 'trash can'}} }"></div>
+      </table>
+  </div>
+<div>

@@ -4,21 +4,21 @@
     <meta charset="utf-8" />
     <title>receptacle</title>
     <link rel="stylesheet" type="text/css" href="./styles/style.css" />
-    <link rel="stylesheet" type="text/css" href="../node_modules/fullpage.js/jquery.fullPage.css"/>
   </head>
   <body ng-controller="SearchController">
-    <div class-"slide">
-      <h1>receptacle</h1>
-      <h3>Find the optimal Berkeley location to dispose of things you no longer use</h3>
-      <div ui-view></div>
-      <a href='http://api.earth911.com'><svg src=''/></a>
-<!--<script src="app/services/services.js"></script> -->
+    <div id="fullpage">
+      <div ui-view>
+      </div>
     </div>
-    <div class-"slide">
-    </div>
-      <script src="../node_modules/angular/angular.min.js"></script>
-      <script src="../node_modules/angular-ui-router/build/angular-ui-router.min.js"></script>
-      <script src="app/app.js"></script>
-      <script src="app/search/search.js"></script>
+  <script src="../node_modules/angular/angular.min.js"></script>
+  <script src="../node_modules/angular-ui-router/build/angular-ui-router.min.js"></script>
+  <script src="app/app.js"></script>
+  <script src="app/search/search.js"></script>
   </body>
 </html>
+
+<!--<div class='navigation'>
+  <ul>
+    <li><a href='#/links' class='index'>All Links</a></li>
+    <li><a href='#/shorten' class='create'>Shorten</a></li>
+  </ul> -->

@@ -3,9 +3,9 @@
   <div class="eighty"><h1>receptacle</h1></div>
 
   <div class="fifty">
-    <h3>Find the optimal location <span ng-click="toggle = !toggle"><span ng-show="toggle">anywhere</span><span ng-hide="toggle">in Oakland</span></span> to dispose of things you no longer <a href="#/beta"><sub>Beta</sub></a></h3>
+    <h3>Find the optimal location <span ng-click="toggle = !toggle"><span ng-show="toggle">anywhere</span><span ng-hide="toggle">in Oakland</span></span> to dispose of things you no longer <a href="#/intro"><sup>Intro</sup></a> <a href="#/beta"><sub>Beta</sub></a></h3>
   </div>
-  <!--input data. want to move into service-->
+  <!--input data. want to move into service eventually-->
   <div ng-init="data = [{type: 'cans', receptacle: 'blue bin'},
                         {type: 'can', receptacle: 'blue bin'},
                         {type: 'container', receptacle: 'blue bin'},
@@ -30,33 +30,24 @@
                         {type: 'plastic bags', receptacle: 'trash can'},
                         {type: 'plasticbags', receptacle: 'trash can'},
                         {type: 'shrinkwrap', receptacle: 'trash can'},
-                        {type: 'clothes', receptacle: 'wildcard'},
+                        {type: 'HELLAtoxicwaste', receptacle: 'wildcard'},
                         {type: 'lightbulbs', receptacle: 'bulb'},
+                        {type: 'cardboard', receptacle: 'cardboard'},
                         {type: 'motor oil', receptacle: 'wildcard'}]"></div>
 
   <div id='search'>
     <input id='searchInput' placeholder="enter item here" ng-model="search.type" ng-submit="gotoBottom()">
   </div>
 
-  <div class="eighty">
-<!--     <nav class="nav-images">
-    <a href='http://api.earth911.com'><img class="1" src="../client/styles/Receptacle-Assets.svg" width="300px" height="300px"/></a>
-    <a href='http://api.earth911.com'><img src="../client/styles/Receptacle-Assets.png" width="300px" height="300px"/></a>
-    <a href='http://api.earth911.com'><img src="../client/styles/Receptacle-Assets.png" width="300px" height="300px"/></a>
-    </nav> -->
-  </div>
-
-  <!--<script src="app/services/services.js"></script>
-   ng-hide="{{ angular.element($document[0].querySelector('#searchInput')).hasClass('ng-untouched') }}" use ngSHOW -->
 </div>
-<div ng-class="{}" ng-repeat="link in data | filter:search:true" id="bottom">
+<!-- sorting done here. ng-show-->
+<div ng-repeat="link in data | filter:search:true" id="bottom">
   <div ng-show="{{link}}">
-    <div ng-class="{'random' : {{link.receptacle === 'wildcard'}},'blue' : {{link.receptacle === 'blue bin'}}, 'green' : {{link.receptacle === 'green bin'}}, 'pink' : {{link.receptacle === 'trash can'}}, 'bulb' : {{link.receptacle}} }">
-      <div class="row">
-      <h2 class="pushOff">Optimal locations to dispose of '{{link.type}}'</h2>
-          <div class="wasteColor" ng-class="{'nextsteps' : {{link.receptacle === 'wildcard'}},'recycle' : {{link.receptacle === 'blue bin'}}, 'compost' : {{link.receptacle === 'green bin'}}, 'trash' : {{link.receptacle === 'trash can'}} }"></div>
-
-      </div>
+    <div ng-class="{'random' : {{link.receptacle === 'wildcard'}},'blue' : {{link.receptacle === 'blue bin'}}, 'green' : {{link.receptacle === 'green bin'}}, 'pink' : {{link.receptacle === 'trash can'}}, 'bulb' : {{link.receptacle === 'bulb'}} , 'cardboard' : {{link.receptacle === 'cardboard'}} }">
+<!--       <div class="row"> -->
+          <div class="wasteColor" ng-class="{'nextsteps' : {{link.receptacle === 'wildcard'}},'recycle' : {{link.receptacle === 'blue bin'}}, 'compost' : {{link.receptacle === 'green bin'}}, 'trash' : {{link.receptacle === 'trash can'}} }">
+          </div>
+<!--       </div> -->
     </div>
   </div>
 </div>

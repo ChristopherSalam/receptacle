@@ -15,6 +15,7 @@
 }
 
 body {
+  background-image: url(../images/crumpled-brown-paper-texture-60perc.jpg);
   margin: 0;
   margin-top: 10px;
   font-family: arial, sans-serif;
@@ -220,6 +221,14 @@ td {
   background-color: #7991b2;
 }
 
+.next {
+  color: #0F3460;
+}
+
+.intro {
+  color: #2f2f2f;
+}
+
 .green{
   background-color: #609d60;
 }
@@ -234,31 +243,40 @@ td {
 
 .recycle{
   background-image: url(../images/recycle.png);
-  background-repeat: no-repeat;
+  background-repeat: repeat;
 }
 
 .compost{
   background-image: url(../images/compost.png);
+  background-repeat: repeat;
+}
+
+.bulb{
+  background-image: url(../images/bulb.png);
   background-repeat: no-repeat;
 }
 
 .trash{
   background-image: url(../images/garbage.png);
+  background-repeat: repeat;
+}
+
+.cardboard{
+  background-image: url(../images/cardboard.png);
   background-repeat: no-repeat;
 }
 
 .nextsteps{
   background-image: url(../images/cons.png);
-  overflow: visible;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
 }
 
 .wasteColor{
   padding-top: 40px;
   height: 300px;
   height: 90vw;
-  background-repeat: none;
-  display:inline-block;
+/*  background-repeat: no-repeat;*/
+/*  display:inline-block;*/
 }
 
 .pushOff {
@@ -280,13 +298,13 @@ td {
   }
 
 #section0{
-    background-image: url(../images/crumpled-brown-paper-texture-60perc.jpg);
-    background-repeat: repeat-y;
+  background-image: url(../images/crumpled-brown-paper-texture-60perc.jpg);
+  background-repeat: repeat-y;
   }
 
-#section1{
-  }
+.intro{
+}
 
-sub{
+sub, sup{
   font-size: 150%;
 }

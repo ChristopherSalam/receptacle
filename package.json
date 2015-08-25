@@ -26,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/ChristopherSalam/receptacleMVP/issues"
   },
-  "homepage": "https://github.com/ChristopherSalam/receptacleMVP#readme"
+  "homepage": "https://github.com/ChristopherSalam/receptacleMVP#readme",
+  "dependencies": {
+    "d3": "^3.5.6"
+  }
 }

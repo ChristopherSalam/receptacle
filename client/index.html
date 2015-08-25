@@ -1,35 +1,61 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="receptacle"> <!-- ng-app='receptacle' -->
-
+<html lang="en" ng-app="receptacle">
   <head>
-
     <title>receptacle</title>
-
     <meta charset="utf-8" />
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta HTTP-EQUIV="X-UA-COMPATIBLE" CONTENT="IE=EmulateIE9" >
+    <script type="text/javascript" src="scripts/d3.min.js"></script>
+    <script type="text/javascript" src="scripts/autocomplete.js"></script>
+    <link rel="stylesheet" href="fonts/bariol/bariol.css"/>
+    <link rel="stylesheet" href="styles/style.css"/>
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/skeleton.css">
     <link rel="stylesheet" type="text/css" href="./styles/style.css" />
     <link rel="icon" type="image/png" href="images/favicon.png">
-
   </head>
-
   <body ng-controller="SearchController">
-
     <div id="scrollArea">
-
       <div ui-view></div>
-
     </div>
+    <div id="test" style="width:100%; height:100%;"></div>
 
-  <script src="../node_modules/angular/angular.min.js"></script>
-  <script src="../node_modules/angular-ui-router/build/angular-ui-router.min.js"></script>
-  <script src="app/app.js"></script>
-  <script src="app/search/search.js"></script>
+<script src="../node_modules/angular/angular.min.js"></script>
+<script src="../node_modules/angular-ui-router/build/angular-ui-router.min.js"></script>
+<script src="app/app.js"></script>
+<script src="app/search/search.js"></script>
 
+<script language="JavaScript">
+
+    //Variable to hold autocomplete options
+    var keys;
+
+    //Load US States as options from CSV - but this can also be created dynamically
+    d3.csv("states.csv",function (csv) {
+        keys=csv;
+        start();
+    });
+
+    //Call back for when user selects an option
+    function onSelect(d) {
+        alert(d.State);
+    }
+
+    //Setup and render the autocomplete
+    function start() {
+        var mc = autocomplete(document.getElementById('test'))
+            .keys(keys)
+            .dataField("State")
+            .placeHolder("Search States - Start typing here")
+            .width(960)
+            .height(500)
+            .onSelected(onSelect)
+            .render();
+    }
+
+</script>
   </body>
 
 </html>

@@ -7,8 +7,6 @@
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta HTTP-EQUIV="X-UA-COMPATIBLE" CONTENT="IE=EmulateIE9" >
-    <script type="text/javascript" src="scripts/d3.min.js"></script>
-    <script type="text/javascript" src="scripts/autocomplete.js"></script>
     <link rel="stylesheet" href="fonts/bariol/bariol.css"/>
     <link rel="stylesheet" href="styles/style.css"/>
     <link rel="stylesheet" href="styles/normalize.css">
@@ -21,47 +19,9 @@
       <div ui-view></div>
     </div>
     <div id="test" style="width:100%; height:100%;"></div>
-
 <script src="../node_modules/angular/angular.min.js"></script>
 <script src="../node_modules/angular-ui-router/build/angular-ui-router.min.js"></script>
 <script src="app/app.js"></script>
 <script src="app/search/search.js"></script>
-
-<script language="JavaScript">
-
-    //Variable to hold autocomplete options
-    var keys;
-
-    //Load US States as options from CSV - but this can also be created dynamically
-    d3.csv("states.csv",function (csv) {
-        keys=csv;
-        start();
-    });
-
-    //Call back for when user selects an option
-    function onSelect(d) {
-        alert(d.State);
-    }
-
-    //Setup and render the autocomplete
-    function start() {
-        var mc = autocomplete(document.getElementById('test'))
-            .keys(keys)
-            .dataField("State")
-            .placeHolder("Search States - Start typing here")
-            .width(960)
-            .height(500)
-            .onSelected(onSelect)
-            .render();
-    }
-
-</script>
   </body>
-
 </html>
-
-<!--<div class='navigation'>
-  <ul>
-    <li><a href='#/links' class='index'>All Links</a></li>
-    <li><a href='#/shorten' class='create'>Shorten</a></li>
-  </ul> -->

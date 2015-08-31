@@ -27,7 +27,7 @@ function autocomplete(parent) {
     var _data=null,
         _delay= 0,
         _selection,
-        _margin = {top: 30, right: 10, bottom: 50, left: 80},
+        _margin = {top: 50, right: 80, bottom: 50, left: 80},
         __width = 420,
         __height = 420,
         _placeHolder = "Search",
@@ -50,13 +50,17 @@ function autocomplete(parent) {
 
             // Select the svg element, if it exists.
             var container = d3.select(this).select("#bp-ac").data([data]);
-            var enter = container.enter()
+            // var container = d3.select(this).select("body").data([data])
+            var enter = container
+                    .enter()
                     .append("div")
+                    // .insert("div",":first-child")
                     .attr("id","bp-ac")
                     .attr("class","bp-ac")
                     .append("div")
                     .attr("class","padded-row")
                     .attr("class","padded-row")
+                    .attr("id","search")
                     .append("div")
                     .attr("style","bp-autocomplete-holder");
 
@@ -65,6 +69,9 @@ function autocomplete(parent) {
 
             var input = enter.append("input")
                         .attr("class", "form-control")
+                        .attr("ng-model","search.type")
+                        .attr("ng-submit","gotoBottom()")
+                        .attr("id", "searchInput")
                         .attr("placeholder",_placeHolder)
                         .attr("type","text")
                         .on("keyup",onKeyUp);

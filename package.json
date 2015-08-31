@@ -28,6 +28,8 @@
   },
   "homepage": "https://github.com/ChristopherSalam/receptacleMVP#readme",
   "dependencies": {
-    "d3": "^3.5.6"
+    "angular": "^1.4.5",
+    "angular-ui-router": "^0.2.15",
+    "ui-router": "0.0.1"
   }
 }

@@ -21,13 +21,6 @@ To build on your learning of core engineering concepts, we will begin thinking a
 
 * Use an [Iterative and incremental development process](http://en.wikipedia.org/wiki/Iterative_and_incremental_development) instead of a [Waterfall Process](http://en.wikipedia.org/wiki/Waterfall_model)
 
-<!--
-*  [Agile](http://en.wikipedia.org/wiki/Agile_software_development) - is a modern evolution of Iterative and Incremental Development (IID) that further formalizes the IID philosophy with a set of principles and best practices. It also applies Lean Manufacturing process like [Kanban](http://en.wikipedia.org/wiki/Kanban).-->
-
-<!--* [Lean Product Process](http://theleanstartup.com/principles) - Takes the essence of Agile Development methodology and applies it more broadly to the development of product and buiness models that support he requirements of the project.
--->
-
-
 ## Basic Requirements
 - [x] Fork the [repo](https://github.com/telegraphacademy/2015-06-mvp)
 - Complete the README.md template (<30min)

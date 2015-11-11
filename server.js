@@ -6,17 +6,16 @@ var express = require('express'),
 
 app.use(express.static(publicDir));
 
-app.get("/", function (req, res) {
-	res.render('index');
-});
+var viewRoute = require('./routes/view'),
+    apiRoute = require('./routes/api');
+
+app.use('/', viewRoute);
+app.use('/api', apiRoute);
+
+// app.get("/", function (req, res) {
+// 	// res.render('index');
+// });
 
 app.listen(port, function(){
 	console.log("Simple static server showing %s listening at http://%s:%s", publicDir, hostname, port);
 });
-
-
-
-
-
-
-

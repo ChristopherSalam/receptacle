@@ -11,12 +11,8 @@ var receptacle = angular.module('receptacle', [
     $stateProvider
       .state('beta', {
         url: '/beta',
-        template: '<h1 class="next">Next?</h1>' +
-        '<h3 class="next">Finish preprocessor for all requests' +
-        ' for trash that goes into curbside bins,</h3>' +
-        ' <h3 class="next"> using local database then Tie in API from Earth911, for coverage on ' +
-        'hazardous wastes and materials that go to special places</h3>' +
-        '<h3 class="next">The scope of my project grew, it should work throughout the U.S.</h3>'
+        templateUrl: 'app/beta/beta.html',
+        controller: 'ListController'
       });
     $stateProvider
       .state('intro', {

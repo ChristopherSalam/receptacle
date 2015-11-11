@@ -7,7 +7,7 @@
   </div>
   <div id='search'>
     <input id='searchInput' auto-complete ui-items="names" placeholder="enter item here" ng-model="search.type" ng-submit="gotoBottom()">
-  </div> 
+  </div>
 </div>
 <div ng-repeat="link in data | filter:search:true" id="bottom">
   <div ng-show="{{link}}">

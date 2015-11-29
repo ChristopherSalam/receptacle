@@ -7,24 +7,20 @@ var receptacle = angular.module('receptacle', [
         url: '/',
         templateUrl: 'app/search/search.html',
         controller: 'SearchController'
-      });
-    $stateProvider
+      })
+      .state('searchFirebase', {
+        url: '/firebase',
+        templateUrl: 'app/searchFirebase/searchFirebase.html',
+        controller: 'SearchController'
+      })
       .state('beta', {
         url: '/beta',
         templateUrl: 'app/beta/beta.html',
         controller: 'ListController'
-      });
-    $stateProvider
+      })
       .state('intro', {
         url: '/intro',
-        template: '<h1 class="intro">Why?</h1>' + '<h3 class="intro">I am that guy that has' +
-        ' lightbulbs and batteries lying around his room.</h3>' +
-        ' <h3 class="intro">When pitching the project, a database for recycling information' +'<h3>'
-        + '<h3 class="intro"> and creating an ' +
-        '<a style="font-size: 125%;"target="_blank" href="http://api.earth911.com/docs/method/earth911.getMaterials/"> API ' +
-        '</a> for this project was discussed.</h3>' +
-        '<h3 class="intro">Built starting point for UI, front end & preprocessing simple items </h3>' +
-        '<h3 class="intro"> that can be sent to bins we have access to.</h3>'
+        templateUrl: 'app/intro/intro.html'
       });
     $urlRouterProvider
       .otherwise('/');

@@ -1,4 +1,4 @@
-angular.module('receptacle')
+angular.module('receptacle.search')
    .controller('MongoController',
       ["$scope",
         function ($scope, $http) {
@@ -22,4 +22,4 @@ angular.module('receptacle')
           $scope.names = $scope.data.map(function(element){
             return element.type;
           });
-    }])
+    }]);

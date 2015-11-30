@@ -10,14 +10,19 @@ var receptacle = angular.module('receptacle', [
       })
       .state('searchFirebase', {
         url: '/firebase',
-        templateUrl: 'app/searchFirebase/searchFirebase.html',
+        templateUrl: 'app/search/searchFirebase.html',
         controller: 'SearchController'
       })
-      .state('beta', {
-        url: '/beta',
-        templateUrl: 'app/beta/beta.html',
-        controller: 'ListController'
+      .state('searchMongo', {
+        url: '/mongo',
+        templateUrl: 'app/search/searchMongo.html',
+        controller: 'MongoController'
       })
+      // .state('beta', {
+      //   url: '/beta',
+      //   templateUrl: 'app/beta/beta.html',
+      //   controller: 'ListController'
+      // })
       .state('intro', {
         url: '/intro',
         templateUrl: 'app/intro/intro.html'

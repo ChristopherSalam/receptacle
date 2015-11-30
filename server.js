@@ -10,14 +10,12 @@ app.use(express.static(publicDir));
 app.use(express.static(nodeModules));
 
 var viewRoute = require('./routes/view'),
-    apiRoute = require('./routes/api');
+    mongoApi = require('./routes/mongoApi');
+    // redisApi = require('./routes/redisApi');
 
 app.use('/', viewRoute);
-app.use('/api', apiRoute);
-
-// app.get("/", function (req, res) {
-// 	// res.render('index');
-// });
+app.use('/mongo', mongoApi);
+// app.use('/redis', redisApi);
 
 app.listen(port, function(){
 	console.log("Simple static server showing %s listening at http://%s:%s", publicDir, hostname, port);

@@ -41,14 +41,14 @@ body {
 
 a {
   color: #333;
-  font-size: 14px;
+  /*font-size: 14px;*/
   text-decoration: none;
 }
 
 h1 {
   font-family: frente, sans-serif, serif;
-  font-size: 80px;
-  font-size: 14vw;
+  font-size: 64px;
+  font-size: 10vw;
   margin: 0 auto;
   text-align: center;
   color: rgba(0,0,0,.6);

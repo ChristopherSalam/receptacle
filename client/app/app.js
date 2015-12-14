@@ -18,11 +18,11 @@ var receptacle = angular.module('receptacle', [
         templateUrl: 'app/search/searchMongo.html',
         controller: 'MongoController'
       })
-      // .state('beta', {
-      //   url: '/beta',
-      //   templateUrl: 'app/beta/beta.html',
-      //   controller: 'ListController'
-      // })
+      .state('searchRedis', {
+        url: '/redis',
+        templateUrl: 'app/search/searchRedis.html',
+        controller: 'RedisController'
+      })
       .state('intro', {
         url: '/intro',
         templateUrl: 'app/intro/intro.html'

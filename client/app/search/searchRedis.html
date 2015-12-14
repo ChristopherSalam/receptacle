@@ -1,17 +1,17 @@
-<div ng-controller="SearchController">
+<div ng-controller="MongoController">
   <div class-"section" id="section0">
     <div class="eighty">
-      <h1>R:firebase</h1>
+      <h1>R:Redis</h1>
     </div>
       <div class="fifty">
         <h3>
-          <a href="#/firebase"><i style="color: rgb(255, 204, 0);
-            -webkit-text-stroke: 1px black;"  class="icon-database"></i></a>
+          <a href="#/firebase"><i class="icon-database"></i></a>
           <a href="#/intro"><i class="icon-ghost"></i></a>
-          <a href="#/mongo"><i class="icon-mongodb"></i></a>
-          <a href="#/redis"><i class="icon-redis"></i></a>
+          <a href="#/mongo"><i  class="icon-mongodb"></i></a>
+          <a href="#/redis"><i style="color: rgb(185, 25, 25);
+            -webkit-text-stroke: 1px black;" class="icon-redis"></i></a>
         </h3>
-        <h3>This page uses Firebase & AngularFire</h3>
+        <h3>This page uses Redis</h3>
       </div>
     <div id='search'>
       <input id='searchInput' auto-complete ui-items="names" placeholder="enter item here" ng-model="search.type" ng-submit="gotoBottom()">
@@ -31,5 +31,5 @@
           </div>
         </div>
       </div>
-    </div>
+  </div>
 </div>

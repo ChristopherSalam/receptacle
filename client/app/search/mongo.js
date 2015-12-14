@@ -1,7 +1,7 @@
 angular.module('receptacle.search')
    .controller('MongoController',
-      ["$scope",
-        function ($scope, $http) {
+      ["$scope", function ($scope, $http) {
+
         $scope.search = "";
 
           $http({
@@ -10,16 +10,12 @@ angular.module('receptacle.search')
             accepts: "application/json",
             datatype:"json",
             data: { "query" : query },
-            error:function(jqxhr, textstatus, errorthrown){console.log("error",query,errorthrown)}
-          }).then(function(response) {
-            console.log(response.data);
-
+            error: function(jqxhr, textstatus, errorthrown){ console.log("error",query,errorthrown); }
+                })
+          .then(function(response) {
             $scope.data = response.data;
-
-           });
-
-
-          $scope.names = $scope.data.map(function(element){
-            return element.type;
-          });
+                });
+            $scope.names = $scope.data.map(function(element){
+                return element.type;
+                });
     }]);

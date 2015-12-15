@@ -1,6 +1,6 @@
 angular.module('receptacle.search', [])
-   .controller('SearchController',
+   .controller('RedisController',
       ["$scope",
-        function ($scope) {
+        function RedisController($scope) {
         $scope.search = "Redis";
     }]);

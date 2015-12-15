@@ -1,6 +1,6 @@
-angular.module('receptacle.search')
+angular.module('receptacle.mongo', [])
    .controller('MongoController',
-      ["$scope", function ($scope, $http) {
+      ["$scope", function MongoController($scope, $http) {
 
         $scope.search = "";
 
@@ -11,11 +11,12 @@ angular.module('receptacle.search')
             datatype:"json",
             data: { "query" : query },
             error: function(jqxhr, textstatus, errorthrown){ console.log("error",query,errorthrown); }
-                })
-          .then(function(response) {
-            $scope.data = response.data;
-                });
-            $scope.names = $scope.data.map(function(element){
-                return element.type;
-                });
+          }).then(function(response) {
+              $scope.data = response.data;
+              console.log(response);
+            });
+
+          $scope.names = $scope.data.map(function(element){
+            return element.type;
+          });
     }]);
